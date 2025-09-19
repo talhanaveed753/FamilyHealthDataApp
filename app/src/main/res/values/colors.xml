@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy Material colors (keeping for compatibility) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Health App Color Palette -->
+    <!-- Primary: Medical Teal -->
+    <color name="medical_teal">#FF00BCD4</color>
+    <color name="medical_teal_dark">#FF0097A7</color>
+    <color name="medical_teal_light">#FF4DD0E1</color>
+    
+    <!-- Secondary: Health Green -->
+    <color name="health_green">#FF4CAF50</color>
+    <color name="health_green_dark">#FF388E3C</color>
+    <color name="health_green_light">#FF81C784</color>
+    
+    <!-- Accent: Energy Orange -->
+    <color name="energy_orange">#FFFF7043</color>
+    <color name="energy_orange_dark">#FFE64A19</color>
+    <color name="energy_orange_light">#FFFF8A65</color>
+    
+    <!-- Warning: Alert Red -->
+    <color name="alert_red">#FFF44336</color>
+    <color name="alert_red_dark">#FFD32F2F</color>
+    <color name="alert_red_light">#FFEF5350</color>
+    
+    <!-- Neutral: Clean grays -->
+    <color name="surface_light">#FFF8F9FA</color>
+    <color name="surface_variant">#FFF1F3F4</color>
+    <color name="outline_variant">#FFE8EAED</color>
+    
+    <!-- Family Member Colors -->
+    <color name="member_blue">#FF42A5F5</color>
+    <color name="member_green">#FF66BB6A</color>
+    <color name="member_orange">#FFFF7043</color>
+    <color name="member_purple">#FFAB47BC</color>
+    <color name="member_indigo">#FF5C6BC0</color>
+    <color name="member_teal">#FF26A69A</color>
+</resources>

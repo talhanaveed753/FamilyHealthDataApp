@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">HealthConnect Tablet</string>
+    
+    <!-- Dashboard -->
+    <string name="family_dashboard_title">Family Health Dashboard</string>
+    <string name="refresh">Refresh</string>
+    <string name="sync_health_data">Sync Health Data</string>
+    <string name="health_assistant">Health Assistant</string>
+    
+    <!-- Family Stats -->
+    <string name="todays_family_activity">Today\'s Family Activity</string>
+    <string name="total_steps">Total Steps</string>
+    <string name="total_calories">Total Calories</string>
+    <string name="goal_achievers">Goal Achievers</string>
+    <string name="most_active_today">Most active today: %1$s</string>
+    <string name="family_members">Family Members</string>
+    <string name="members_count">%1$d members</string>
+    
+    <!-- Health Metrics -->
+    <string name="steps">Steps</string>
+    <string name="heart_rate">BPM</string>
+    <string name="sleep">Sleep</string>
+    <string name="calories">Cal</string>
+    <string name="distance">Distance</string>
+    <string name="active_at">Active at %1$s</string>
+    <string name="sleep_hours">%1$.1fh</string>
+    <string name="no_data_available">No data available</string>
+    <string name="sync_health_data_description">Sync health data to see metrics</string>
+    <string name="weekly_trend">7-day trend</string>
+    
+    <!-- Insights -->
+    <string name="family_health_insights">Family Health Insights</string>
+    <string name="insight_very_active">Your family is very active! Great job maintaining high step counts.</string>
+    <string name="insight_good_activity">Good activity levels! Consider setting a family challenge to reach 10,000 steps each.</string>
+    <string name="insight_room_improvement">Room for improvement! Try family walks after dinner to boost activity.</string>
+    <string name="insight_get_moving">Let\'s get moving! Set small, achievable goals to increase daily activity.</string>
+    <string name="insight_goal_achievers">%1$d%% of family members reached their step goal today!</string>
+    <string name="insight_excellent_sleep">Excellent sleep habits! Your family is well-rested.</string>
+    <string name="insight_good_sleep">Good sleep patterns. Aim for 8+ hours for optimal health.</string>
+    <string name="insight_better_sleep">Consider establishing better sleep routines for the whole family.</string>
+    
+    <!-- Chatbot -->
+    <string name="ask_about_health">Ask me about your family\'s health</string>
+    <string name="chat_input_placeholder">Ask about your family\'s health...</string>
+    <string name="send">Send</string>
+    <string name="close">Close</string>
+    <string name="welcome_message">Welcome to your Health Assistant!</string>
+    <string name="welcome_description">I can help you understand your family\'s health data and provide personalized insights. Try asking me:</string>
+    <string name="suggestion_family_today">How is my family doing today?</string>
+    <string name="suggestion_most_active">Who\'s the most active this week?</string>
+    <string name="suggestion_sleep">Give me sleep recommendations</string>
+    <string name="suggestion_goals">How can we improve our health goals?</string>
+    <string name="current_family_data">Current Family Data:</string>
+    <string name="family_members_count">• %1$d family members</string>
+    <string name="total_steps_today">• %1$s total steps today</string>
+    <string name="goal_achievers_count">• %1$d members reached their goals</string>
+    
+    <!-- Errors -->
+    <string name="loading_family_data">Loading family health data...</string>
+    <string name="error_something_wrong">Oops! Something went wrong</string>
+    <string name="try_again">Try Again</string>
+    <string name="error_user_not_authenticated">User not authenticated</string>
+    <string name="error_not_in_family">User is not part of a family</string>
+    <string name="error_load_user">Failed to load user</string>
+    <string name="error_load_family">Failed to load family data</string>
+    
+    <!-- Health Connect -->
+    <string name="health_connect_not_available">Health Connect is not available on this device</string>
+    <string name="health_connect_permissions_required">Health Connect permissions are required to sync your health data</string>
+    <string name="health_connect_permissions_denied">Some Health Connect permissions were denied. The app will work with limited functionality.</string>
+    
+    <!-- Permissions -->
+    <string name="permission_steps">Steps data</string>
+    <string name="permission_heart_rate">Heart rate data</string>
+    <string name="permission_sleep">Sleep data</string>
+    <string name="permission_calories">Calories burned data</string>
+    <string name="permission_distance">Distance data</string>
+</resources>

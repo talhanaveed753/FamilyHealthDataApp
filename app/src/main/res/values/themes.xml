@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for health app - optimized for tablets -->
+    <style name="Theme.HealthConnect_Tablet" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Health-focused primary color - Medical teal -->
+        <item name="colorPrimary">@color/medical_teal</item>
+        <item name="colorPrimaryVariant">@color/medical_teal_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Health-focused secondary color - Healthy green -->
+        <item name="colorSecondary">@color/health_green</item>
+        <item name="colorSecondaryVariant">@color/health_green_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Clean status bar for tablets -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Tablet-optimized window settings -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

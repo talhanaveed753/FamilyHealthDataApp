@@ -28,6 +28,7 @@ object TokenScanService {
         sleepLimit: Int,
         heartLimit: Int,
         remoteLogger: suspend (ScanRecord) -> Unit
+
     ): String? {
         val records = message.records ?: return null
         for (record in records) {

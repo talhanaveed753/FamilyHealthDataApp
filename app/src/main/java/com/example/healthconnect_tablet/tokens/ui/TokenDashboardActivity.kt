@@ -27,6 +27,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
@@ -72,6 +73,7 @@ class TokenDashboardActivity : ComponentActivity() {
             TokenDashboardViewModelFactory(applicationContext, userId, familyName)
         )[TokenDashboardViewModel::class.java]
 
+        @OptIn(ExperimentalMaterial3Api::class)
         setContent {
             val uiState by viewModel.uiState.collectAsState()
             val snackbarHostState = remember { SnackbarHostState() }
@@ -203,6 +205,7 @@ class TokenDashboardActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun TokenDashboardTopBar(
     userName: String,

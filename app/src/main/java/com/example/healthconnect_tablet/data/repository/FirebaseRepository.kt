@@ -1,6 +1,8 @@
 package com.example.healthconnect_tablet.data.repository
 
 import com.example.healthconnect_tablet.data.model.*
+import com.example.healthconnect_tablet.tokens.model.TokenAllowance
+import com.example.healthconnect_tablet.tokens.model.TokenRules
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -27,7 +29,7 @@ class FirebaseRepository {
         private const val USER_PROFILES_COLLECTION = "userProfiles"
         private const val DATE_FORMAT = "yyyy-MM-dd"
     }
-    
+
     private val dateFormatter = SimpleDateFormat(DATE_FORMAT, Locale.getDefault())
     
     /**
@@ -500,4 +502,38 @@ class FirebaseRepository {
             Result.failure(e)
         }
     }
-} 
+
+    /**
+     * Compute today's token allowance for the given user based on Firestore logs.
+     */
+    suspend fun getTodayTokenAllowance(userId: String, familyName: String): Result<TokenAllowance> {
+        return try {
+            val today = dateFormatter.format(Date())
+            val document = firestore.collection(familyName)
+                .document(userId)
+                .collection("dailyLogs")
+                .document(today)
+                .get()
+                .await()
+
+            if (!document.exists()) {
+                return Result.success(TokenAllowance())
+            }
+
+            val exerciseLogs = document.get("exerciseLogs") as? Map<*, *>
+            val sleepLogs = document.get("sleepLogs") as? Map<*, *>
+
+            val steps = (exerciseLogs?.get("totalSteps") as? Number)?.toInt() ?: 0
+            val sleepMinutes = (sleepLogs?.get("totalSleepMinutes") as? Number)?.toInt() ?: 0
+
+            val allowance = TokenAllowance(
+                activityTokens = TokenRules.activityTokensForSteps(steps),
+                sleepTokens = TokenRules.sleepTokensForMinutes(sleepMinutes)
+            )
+
+            Result.success(allowance)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+}

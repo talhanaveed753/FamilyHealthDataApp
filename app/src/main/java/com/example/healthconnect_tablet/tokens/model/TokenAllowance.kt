@@ -2,7 +2,7 @@ package com.example.healthconnect_tablet.tokens.model
 
 /**
  * Represents the number of tokens a user can earn for a given day.
- * The values are computed from daily Firestore logs.
+ * The values are computed from daily Firestore data.
  */
 data class TokenAllowance(
     val stepsTokens: Int = 0,

@@ -505,7 +505,8 @@ class FirebaseRepository {
     }
 
     /**
-     * Compute today's token allowance for the given user based on Firestore logs.
+     * Compute today's token allowance for the given user based on Firestore data.
+     * Update once we have more defined procedure of calculating token.
      */
     suspend fun getTodayTokenAllowance(userId: String, familyName: String): Result<TokenAllowance> {
         return try {
@@ -540,7 +541,7 @@ class FirebaseRepository {
             Result.failure(e)
         }
     }
-
+    // Decided not to use heart rate, so this is no longer used
     private fun computeHeartTokens(avgHeartRate: Int): Int = when {
         avgHeartRate <= 0 -> 0
         avgHeartRate in 55..70 -> 3
